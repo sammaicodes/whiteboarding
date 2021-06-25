@@ -71,5 +71,49 @@ function removingDuplicates(userInput){
   return removed
 }
 
+Question #3: Compressing Strings
+Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
 
+Example
+Input: "aaabccdddda"
 
+Output: "3ab2c4da"
+
+Question #3: Compressing Strings
+Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
+
+Example
+Input: "aaabccdddda"
+
+Output: "3ab2c4da"
+
+Possible Steps:
+*********************************************
+
+Question #4: Checking for Uniqueness
+Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
+
+Example
+Input: "hello"
+
+Output: false
+
+Input: "copyright"
+
+Output: true
+
+Steps:
+
+1. Fill a Set with all characters of the string and compare its size to the string's length:
+
+Solution:
+
+let expectedFalse = "hello"
+let expectedTrue = "copyright"
+function onlyUniques(userInput){
+  return new Set(userInput).size == userInput.length;
+}
+
+Output:
+onlyUniques(expectedFalse)-->false
+onlyUniques(expectedTrue)-->true
