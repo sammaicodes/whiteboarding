@@ -88,7 +88,18 @@ Input: "aaabccdddda"
 Output: "3ab2c4da"
 
 Possible Steps:
-*********************************************
+1. Convert string to array
+2. Make a set with all the unique elements (keys).
+3. make a for loop and keep track of the repeated values with an if statement
+
+Attempted Solution:
+
+let strArray = str.split("") //-->["a", "a", "a", "b", "c", "c", "d", "d", "d", "d", "a"]
+let uniquesOnly = [...new Set(strArray)] //--> ["a", "b", "c", "d"]
+
+for(;;){
+
+}
 
 Question #4: Checking for Uniqueness
 Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
