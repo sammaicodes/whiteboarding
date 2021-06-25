@@ -29,3 +29,47 @@ let boOl = strElements.includes(" ")
   }
 return finalUrl
 }
+
+
+Question #2: Array Deduping
+Write an algorithm that removes duplicates from an array. Do not use a function like filter() to solve this. Once you have solved the problem, demonstrate how it can be solved with filter(). Solve the problem with and without recursion.
+
+Example
+Input: [7, 9, "hi", 12, "hi" 7, 53]
+
+Output: [7, 9, "hi", 12, 53]
+
+Possible Steps :
+  1. Write a for loop to check every index.
+  2. At every index, it should check if that element in the array is included elsewhere
+  3. If its included, slice it.
+  4. it should return an array with no duplicates 
+
+  Attempted soloution that only works for the first duplicate encounter:
+
+let userArray = [7, 9, "hi", 12, "hi", 7, 53]
+function removingDuplicates(userArray){
+  let noDuplicatesArray
+  let elementOne
+  for(let i = 0; i < userArray.length; i++){
+    elementOne = userArray[i]  //starts at index 0
+    if(userArray.includes(elementOne) === true){
+      noDuplicatesArray = userArray.splice(i+1)  //slice() starts at 1 not 0 and I started the counter at 0
+    }
+  }
+  return noDuplicatesArray
+}
+
+Shorter solution using Set that does work:
+
+1. Convert the array to a Set, A set can only have unique elements.
+2. Convert the set to an Array
+
+let userInput = [7, 9, "hi", 12, "hi", 7, 53]
+function removingDuplicates(userInput){
+  let removed = [...new Set(userInput)]
+  return removed
+}
+
+
+
