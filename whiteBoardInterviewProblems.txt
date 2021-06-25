@@ -97,9 +97,34 @@ Attempted Solution:
 let strArray = str.split("") //-->["a", "a", "a", "b", "c", "c", "d", "d", "d", "d", "a"]
 let uniquesOnly = [...new Set(strArray)] //--> ["a", "b", "c", "d"]
 
-for(;;){
+function simplify(str){
+  let i;
+  for(i = 0; i < str.length; i++){  //a 
+    if(str[i] === strArray.includes(str[i])){
+      i = i + 1
+    }else{
+    
+    }
+  }
+}
+
+let obj = {}
+let keyValue
+function simplify(){
 
 }
+for(x = 0, x < str.length; x++) {
+  var keyNum = str.charAt(x)
+  obj.uniquesOnly[keyNum] = obj[keyNum] + 1
+}
+
+let strArray = str.split("") //-->["a", "a", "a", "b", "c", "c", "d", "d", "d", "d", "a"]
+let obj = {}
+let uniquesOnly = [...new Set(strArray)] //--> ["a", "b", "c", "d"]
+
+
+let uniqueSet = [new Set(strArray)]// -->  {"a", "b", "c", "d"} also have indeces {0,1,2,3} and size = 4
+*********** needs work!
 
 Question #4: Checking for Uniqueness
 Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.

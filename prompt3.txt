@@ -1,0 +1,36 @@
+Question #3: Compressing Strings
+Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
+
+Example
+Input: "aaabccdddda"
+
+Output: "3ab2c4da"
+
+1. use a set to make an array that contains unique elements.
+2. make an object to keep track of unique values
+3. make a loop to update this values
+4. each unique element with its value in object
+5 return a string joining the key-value pairs
+
+given "hello"
+function reduction(userStr){
+  let userArray = userStr.split('')  --> [h,e,l,l,o]
+
+
+            // let onlyUniques = [...new Set(userArray)] ---> [h,e,l,o]
+          //{0: "h", 1: "e"...}
+  let reducedObj = {} 
+  {
+    "h": 0  onlyUniques[i]
+    "e": 0
+  }
+
+}
+
+for(let i=0; i< userStr.length; i++){
+  if(contains)
+  let keyNum = str[i]
+  reducedObj.keyNum = reducedObj.keynum + 1 
+}
+
+
