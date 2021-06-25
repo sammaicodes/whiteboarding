@@ -1,0 +1,31 @@
+Question #1: Turning Strings to URLs
+URLs cannot have spaces. Instead, all spaces in a string are replaced with %20. Write an algorithm that replaces all spaces in a string with %20.
+
+You may not use the replace() method or regular expressions to solve this problem. Solve the problem with and without recursion.
+
+Example
+Input: "Jasmine Ann Jones"
+
+Output: "Jasmine%20Ann%20Jones"
+
+Possible steps: 
+  1. Split all the individual components of a string into an array.
+  2. Check if there are any white spaces.
+  3. If there are white spaces, use split/join to replace the white with %20. 
+  4. If there are no white spaces, just return the original string.
+  5. Return the final answer.
+
+SOLUTION 
+let userString = "Jasmine Ann Jones"
+function noSpacesAllowed(userString){
+let finalUrl
+let strElements = userString.split("")      //turn string into elements of an array to check for white spaces for the split/join function to not be undefined
+let boOl = strElements.includes(" ")  
+  if( boOl === true){                       //boolean, if true (there is white spaces) replace the space with %20
+    finalUrl = userString.split(" ").join("%20")
+  }
+  else{        
+    finalUrl = userString
+  }
+return finalUrl
+}
